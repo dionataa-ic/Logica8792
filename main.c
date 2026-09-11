@@ -1,17 +1,30 @@
 #include<stdio.h>
 #include<windows.h>
 
+
+
+    
 int main(){
 
-int idade;
 
-printf("Digite a idade: ");
-scanf("%d", &idade);
 
-printf("Equivale a %d meses\n", idade * 12);
-printf("Equivale a %d dias (aproximados)\n",idade * 365);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
-return 0;
+int n;
+     printf("Digite um número: ");
+     scanf("%d", &n);
+
+     printf("Antecessor: %d\n", n - 1);
+     printf("Sucessor: %d\n", n + 1);
+
+
+    
+    
+
+
+    return 0;
+
 
 
 }
