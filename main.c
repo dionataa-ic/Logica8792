@@ -11,18 +11,16 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    float valor, cotacao;
+    float raio;
+    const float PI = 3.14159;
 
-    printf("Digite o valor em reais: ");
-    scanf("%f", &valor);
+    printf("Digite o raio do circulo: ");
+    scanf("%f", &raio);
 
-    printf("Digite a cotação do dolar: ");
-    scanf("%F", &cotacao);
+    printf("Area: %.2f\n", PI * raio * raio);
+    printf("Perimetro: %.2f\n", 2 * PI * raio);
 
-    printf("Valor em dolares: %.2f\n", valor / cotacao);
-
-
-
+    
     return 0;
 
 
