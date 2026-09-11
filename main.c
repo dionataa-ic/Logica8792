@@ -11,16 +11,16 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int n;
-     printf("Digite um número: ");
-     scanf("%d", &n);
+    float valor, cotacao;
 
-     printf("Antecessor: %d\n", n - 1);
-     printf("Sucessor: %d\n", n + 1);
+    printf("Digite o valor em reais: ");
+    scanf("%f", &valor);
 
+    printf("Digite a cotação do dolar: ");
+    scanf("%F", &cotacao);
 
-    
-    
+    printf("Valor em dolares: %.2f\n", valor / cotacao);
+
 
 
     return 0;
