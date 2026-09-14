@@ -16,19 +16,8 @@ int main(){
     printf("Digite um número: ");
     scanf("%d", &n);
 
-    // if(....){
-    //     code..
-    // }
+    printf("%s", n > 0 ? "Positivo" : (n < 0 ? "Negativo" : "Zero"));
 
-    if(n > 0){
-        printf("Positivo\n");
-    }else{
-        printf("Negativo\n");
-        
-    }
-    
     return 0;
-
-
 
 }
