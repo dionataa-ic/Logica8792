@@ -11,38 +11,41 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int dia;
+    int nota;
     
     printf("Digite o número de 1 a 7: ");
-    scanf("%d", &dia);
+    scanf("%d", &nota);
 
 
-    switch (dia){
+    switch (nota){
         case 1:
-            printf("Domingo!");
+            printf("Reprovado");
             break;
         case 2:
-            printf("Segunda-feira");
+            printf("Reprovado");
             break;
         case 3:
-            printf("Terça-feira");
+            printf("Reprovado");
             break;
         case 4:
-            printf("Quarta-feira");
+            printf("Reprovado");
             break;
         case 5:
-            printf("Quinta-feira");
+            printf("Recuperação");
             break;
         case 6:
-            printf("Sexta-feira");
+            printf("Aprovado");
             break;
         case 7:
-            printf("Sabado");
-            break;
-        default:
-            printf(" Número inválido!!");
+            printf("Aprovado");
             break;
 
-            return 0;
+        default:
+            printf(" Nota Invalida!!");
+            break;
+           
+
     }
+
+     return 0;
     }
