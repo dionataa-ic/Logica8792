@@ -11,41 +11,26 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int nota;
-    
-    printf("Digite o número de 1 a 7: ");
-    scanf("%d", &nota);
+    float n1, n2, n3, media; 
 
+    printf("Digite a nota 1: ");
+    scanf("%f", &n1);
 
-    switch (nota){
-        case 1:
-            printf("Reprovado");
-            break;
-        case 2:
-            printf("Reprovado");
-            break;
-        case 3:
-            printf("Reprovado");
-            break;
-        case 4:
-            printf("Reprovado");
-            break;
-        case 5:
-            printf("Recuperação");
-            break;
-        case 6:
-            printf("Aprovado");
-            break;
-        case 7:
-            printf("Aprovado");
-            break;
+    printf("Dgitene a nota 2: ");
+    scanf("%f", &n2);
 
-        default:
-            printf(" Nota Invalida!!");
-            break;
-           
+    printf("Digite a Noita 3: ");
+    scanf("%f", &n3);
 
+    media = (n1 + n2 + n3) / 3;
+
+    if(media >=7){
+        printf("Aprovado!");
+    }else if(media >= 5){
+        printf("recuperação!");
+    }else{
+        printf("Reprovado!");
     }
 
-     return 0;
+    return 0;
     }
