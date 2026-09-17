@@ -11,26 +11,22 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    float n1, n2, n3, media; 
+    float a, b, c;
+    
+    printf("Digite os tres lados do triângulo");
+    scanf("%f %f %f", &a, &b, &c);
 
-    printf("Digite a nota 1: ");
-    scanf("%f", &n1);
 
-    printf("Dgitene a nota 2: ");
-    scanf("%f", &n2);
-
-    printf("Digite a Noita 3: ");
-    scanf("%f", &n3);
-
-    media = (n1 + n2 + n3) / 3;
-
-    if(media >=7){
-        printf("Aprovado!");
-    }else if(media >= 5){
-        printf("recuperação!");
+    if (a == b && b == c){
+        printf("Equilátero!\n");
+    }else if(a == b || a == c || b == c){
+        printf("Isosceles!\n");
     }else{
-        printf("Reprovado!");
+        printf("Escaleno!\n");
     }
+    
+
+    
 
     return 0;
     }
