@@ -12,19 +12,16 @@ int main(){
     SetConsoleOutputCP(65001);
 
     
-    int n;
-    printf(" Digite um número: ");
-    scanf("%d", &n);
+    int ano;
+    printf("Digite o Ano: ");
+    scanf("%d", &ano);
 
-    if(n % 3 == 0 && n % 5 == 0){
-        printf("Múltiplo de 3 e 5\n");
-    }else if(n % 3 == 0){
-        printf("Múltiplo de 3\n");
-    }else if(n % 5 == 0){
-        printf("Não é Múltiplo de 5\n");
+    if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
+        printf("Ano: %d\n", ano);
+        printf("Ano não bisssexto!\n"); 
     }else{
-        printf("Não é Múltiplo de 3 nem de 5\n");
+        printf("Ano: %d\n", ano);
+        printf("Ano Nisexto!\n");
     }
-
     return 0;
     }
