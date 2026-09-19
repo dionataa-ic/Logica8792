@@ -11,17 +11,30 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    
-    int ano;
-    printf("Digite o Ano: ");
-    scanf("%d", &ano);
+    float peso, altura, imc; 
 
-    if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
-        printf("Ano: %d\n", ano);
-        printf("Ano não bissexto!\n"); 
+    printf("Digite o peso (kg): ");
+    scanf("%f", &peso);
+
+    printf("Digite a altura (m): ");
+    scanf("%f", &altura);
+
+    imc = peso / (altura * altura);
+
+    if(imc < 18.5){
+        printf(" Seu peso é: %f\n", peso);
+        printf(" Sua altura é: %f\n", altura);
+        printf("Classificação: abaixo do peso!\n");
+    }else if(imc < 25){
+        printf(" Classificação: Peso Normal!\n");
+    }else if( imc <30){
+        printf("Classifcação: Sobrepeso!\n");
     }else{
-        printf("Ano: %d\n", ano);
-        printf("Ano Nisexto!\n");
+        printf("classificação: Obesidade!\n");
+
     }
+
+    
+  
     return 0;
     }
