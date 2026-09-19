@@ -18,7 +18,7 @@ int main(){
 
     if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
         printf("Ano: %d\n", ano);
-        printf("Ano não bisssexto!\n"); 
+        printf("Ano não bissexto!\n"); 
     }else{
         printf("Ano: %d\n", ano);
         printf("Ano Nisexto!\n");
