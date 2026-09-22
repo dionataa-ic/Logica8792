@@ -4,8 +4,8 @@
 #include<string.h>
 
 
-void dobrar (int *x){
-    *x = *x  * 2;
+void saudar(const char *nome){
+    printf("Olá %s\n ", nome);
 }
 
     
@@ -16,9 +16,11 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numero = 10;
-    dobrar(&numero);
-    printf("Número depois função %d\n", numero); 
+    saudar("Dionata Ivan");
+    saudar("Correa");
+    saudar("De Souza");
+
+    
   
     return 0;
     }
