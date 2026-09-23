@@ -2,6 +2,8 @@
 #include<windows.h>
 #include<locale.h>
 #include<string.h>
+#include<math.h>
+
 
 int main(){
 
@@ -10,15 +12,13 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char nomes [3][20] ={
-        "Dionata",
-        "Jessica",
-        "Correa"
-    };
+    int numero; 
+    printf("Digite um número: ");
+    scanf("%d", &numero);
 
-    for(int i = 0; i < 3; i++){
-        printf("%s\n", nomes[i]);
-    }
-    
+    int quadrado = (int)pow(numero, 2);
+    int cubo = (int)pow(numero, 3);
+    printf("Quadrado de %d - %d\n", numero, quadrado);
+    printf("Cubo de %d = %d", numero, cubo);
     return 0;
     }
