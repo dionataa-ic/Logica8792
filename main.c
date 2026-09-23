@@ -5,13 +5,15 @@
 #include<math.h>
 
 
-    void tabuada(int n){
-        printf("Tavuada do %d\n", n);
+    int tabuada(int n){
+        int resultado; 
+        printf("Tabuada do %d:\n", n);
         for(int i = 1; i <= 10; i++){
-            printf("%d x %d = %d\n", n, i, n * i);
-
+            resultado = n * i;
+            printf("%d x %d = %d\n", n, i, resultado);
         }
-    }
+        return resultado; 
+        }
 
 int main(){
 
@@ -22,7 +24,8 @@ int main(){
 
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
-    tabuada(7);
+    int ultimo = tabuada(7);
+    printf("Último valor da tabuada: %d\n", ultimo);
 
 
     
