@@ -5,6 +5,17 @@
 #include<math.h>
 
 
+    int fatorial(int n){
+        int resultado = 1;
+    
+
+        for(int i = 1; i <= n; i++)
+            resultado *= i; //resultado = resultado * i;
+
+            return resultado; 
+        }
+
+
 int main(){
 
 
@@ -12,13 +23,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numero; 
-    printf("Digite um número: ");
-    scanf("%d", &numero);
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+    int numero = 5;
+    printf("Fatorial de %d = %d\n", numero, fatorial(numero));
 
-    int quadrado = (int)pow(numero, 2);
-    int cubo = (int)pow(numero, 3);
-    printf("Quadrado de %d - %d\n", numero, quadrado);
-    printf("Cubo de %d = %d", numero, cubo);
+
+
+    
     return 0;
     }
