@@ -10,22 +10,20 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, contador = 0;
-    printf("Digite o limite N: ");
-    scanf("%d", &n);
-    for(int num = 2; num <= n; num++){
-        int primo = 1;
-        for(int i = 2; i < num; i++){
-            if(num % i == 0){
-                primo = 0;
-                break;
+    int limite;
+    printf("Digite o limite: ");
+    scanf("%d", &limite);
+    for(int n = 1; n <= limite; n++){
+        int soma = 0;
+        for(int i = 1; i < n; i++){
+            if(n % i == 0){
+                soma += i;
             }
         }
-        if (primo){
-                contador++;
+        if(soma == n && n != 0){
+            printf("%d é um número perfeito\n", n);
         }
     }
-    printf("Quantidade de primos entre 1 e %d: %d\n", n, contador);
 
     return 0;
- }
+ }   
