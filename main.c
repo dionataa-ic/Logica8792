@@ -10,28 +10,19 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, primo = 1; 
-    printf(" Digite um numero: ");
-    scanf("%d", &n);
+    int n = 8;
 
-    if (n < 2){
-        primo = 0; 
-    }else{
-        for(int i = 2; i < n; i++){
-            if(n % i == 0){
-                primo = 0; 
-                break;
-            }
+
+for(int i = 0; i < n; i++){
+    for(int j = 0; j < n; j++){
+        if((i + j) % 2 == 0){
+            printf("[ ]");
+        }else{
+            printf("[#]");
         }
-
-}
-
-    if(primo){
-        printf("%d é primo\n", n);
-    }else{
-        printf("%d não é primo\n", n);
     }
-
+    printf("\n");
+}
 
     return 0;
  }   
