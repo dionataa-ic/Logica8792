@@ -4,16 +4,32 @@
 #include<string.h>
 #include<math.h>
 
-char* saudacao(){
-    return "ola, seja bem-vindo(a)!";
-}
+
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("%s\n", saudacao());
+    int voto; 
+
+    printf("Qual seu Voto: ");
+    scanf("%d", &voto);
+
+    if(voto == 10){
+        printf("Manoel");
+    }else if(voto == 20){
+        printf("Carla");
+    }else if(voto == 30){
+        printf("Bianca");
+    }else if(voto == 40){
+        printf("Henrique");
+    }else if(voto == 50){
+        printf("Bruno");
+    }else{
+        printf(" Voto Invalido");
+    }
+    
 
     
 
