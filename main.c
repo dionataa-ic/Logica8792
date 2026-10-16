@@ -20,27 +20,41 @@ int main(){
 
     printf("--- Bem Vindo A Acamademia PesoMenos ---");
 
-    struct pessoa p1;
-    printf("Digite seu nome: ");
-    fgets(p1.nome, sizeof(p1.nome), stdin);
-    
-    printf("Digite sua idade: ");
-    scanf("%d", &p1.idade);
+    int n;
 
-    printf("Digite Sua Altura: ");
-    scanf("%f", &p1.altura );
+    printf("Quantas pessoas deseja cadasrar: ");
+    scanf("%d", &n);
 
-    printf("Digite seu peso: ");
-    scanf("%f", &p1.peso);
 
-    printf("Cadastro Efetuado com sucesso");
+    getchar(); //consome o '\n' deixando pleo scanf
 
-    printf("\n--- Dados ---\n");
-      printf("Nome: %s\n", p1.nome);
-      printf("Idade: %d\n", p1.idade);
-      printf("Altura: %.2f\n", p1.altura);
-      printf("Peso: %.2f\n", p1.peso);
-      
+
+    struct pessoa p1[n];
+
+    for(int i = 0; i < n; i++){
+      printf("\npessoa %d\n", i + 1);
+      printf("Nome Completo: ");
+      fgets(p1[i].nome, sizeof(p1[i].nome), stdin);
+
+      printf("Idade: ");
+      scanf("%d", &p1[i].idade);
+
+      printf("Altura: ");
+      scanf("%f", &p1[i].altura);
+
+      printf("Peso: ");
+      scanf("%f", &p1[i].peso);
+      getchar();
+
+
+    }
+
+    printf("\n---  Lista de Pessoas ---\n");
+    for(int i = 0; i < n; i++){
+
+      printf("Nome: %s\n idade: %d | Altura: %.2f | Peso: %.2f", p1[i].nome, p1[i].idade, p1[i].altura, p1[i].peso);
+
+    }
 
     return 0;
     
