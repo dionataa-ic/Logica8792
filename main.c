@@ -22,7 +22,7 @@ int main(){
 
     struct pessoa p1;
     printf("Digite seu nome: ");
-    scanf("%s", p1.nome);
+    fgets(p1.nome, sizeof(p1.nome), stdin);
     
     printf("Digite sua idade: ");
     scanf("%d", &p1.idade);
@@ -39,11 +39,8 @@ int main(){
       printf("Nome: %s\n", p1.nome);
       printf("Idade: %d\n", p1.idade);
       printf("Altura: %.2f\n", p1.altura);
-      printf("Peso: %2.f\n", p1.peso);
+      printf("Peso: %.2f\n", p1.peso);
       
-
-
-
 
     return 0;
     
