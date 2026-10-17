@@ -5,12 +5,6 @@
 #include<math.h>
 
 
-struct pessoa{
-   char nome[50];
-   int idade;
-   float altura;
-   float peso;
-};
 
 
 int main(){
@@ -18,43 +12,37 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("--- Bem Vindo A Acamademia PesoMenos ---");
-
     int n;
-
-    printf("Quantas pessoas deseja cadasrar: ");
+    printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
-
-
-    getchar(); //consome o '\n' deixando pleo scanf
-
-
-    struct pessoa p1[n];
+    int v[n];
 
     for(int i = 0; i < n; i++){
-      printf("\npessoa %d\n", i + 1);
-      printf("Nome Completo: ");
-      fgets(p1[i].nome, sizeof(p1[i].nome), stdin);
-
-      printf("Idade: ");
-      scanf("%d", &p1[i].idade);
-
-      printf("Altura: ");
-      scanf("%f", &p1[i].altura);
-
-      printf("Peso: ");
-      scanf("%f", &p1[i].peso);
-      getchar();
-
+      printf("digite o valor %d: ", i + 1);
+      scanf("%d", &v[i]);
 
     }
 
-    printf("\n---  Lista de Pessoas ---\n");
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n - 1; i++){
+      for(int j = 0; j < n - i - 1; j++){
 
-      printf("Nome: %s\n idade: %d | Altura: %.2f | Peso: %.2f", p1[i].nome, p1[i].idade, p1[i].altura, p1[i].peso);
+         if(v[j] > v[j + 1]){
+            int temp = v[j];
+            v[j] = v[j + 1];
+            v[j + 1] = temp;
+         }
+         
+      }
+    }
+
+    printf("Vetor ordenado: \n");
+    for(int i = 0; i < n; i++){
+      printf("%d", v[i]);
 
     }
+
+    printf("\n");
+
 
     return 0;
     
